@@ -1,8 +1,9 @@
 
 
 package palindromo;
-import java.util.*;
+
 import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Palindromo {
 
@@ -20,7 +21,8 @@ public class Palindromo {
             calculos=Integer.parseInt(JOptionPane.showInputDialog(null,"digitar la opcion a realizar:\n "+
                     "1-palindromo \n"+
                     "2- repetir \n"+ 
-                    "3- salir"));
+                    "3- salir \n"+
+                    "4- calculadora  " ));
             
             switch(calculos){
                 
@@ -48,6 +50,8 @@ public class Palindromo {
                     for (int j = 0; j <cadenadearray.length; j++){
                      if (cadenadearray[j] == caracter) {
                      contador++;
+                     
+                     
 
         }
     }
@@ -61,7 +65,31 @@ public class Palindromo {
                     case 3: JOptionPane.showMessageDialog(null, "saliendo"); System.exit(0);break;
                     default: JOptionPane.showMessageDialog(null, "valor numerico invalido","error", JOptionPane.WARNING_MESSAGE);
                 
+                    
+                    case 4: 
+                        
+                        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Digite un valor");
+        int num1= sc.nextInt();
+        
+        System.out.println("Dijite otro valor");
+        int num2= sc.nextInt();
+        
+        int total = num1+ num2;
+        System.out.println("El resultado de la suma es "+ total);
+        
+        int total2 = num1 - num2;
+        System.out.println("El resultado de la resta es "+ total2);
+        
+        int total3 = num1 * num2;
+        System.out.println("El resultado de la multiplicacion es "+ total3);
+        
+        int total4 = num1 / num2;
+        System.out.println("El resultado de la division es "+ total2);
             }
+            
                
                     
         } while (calculos!=3);
